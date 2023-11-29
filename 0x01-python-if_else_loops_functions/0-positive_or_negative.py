@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 
-number = random.randint(-10, 10)  # Randomly generates a number between -10 and 10 (inclusive)
+number = random.randint(-10, 10)
 
 if number > 0:
     print(f"{number} is positive")
