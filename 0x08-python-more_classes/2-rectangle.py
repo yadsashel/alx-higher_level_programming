@@ -1,35 +1,46 @@
+#!/usr/bin/python3
+"""2-rectangle, built for Python project 0x08 task 2.
+"""
+
+
 class Rectangle:
+    """Takes in args for width and height of a rectangle, and contains methods
+    for calculation of the area or perimeter.
+
+    Args:
+        width (int): horizontal dimension of rectangle, defaults to 0
+        height (int): vertical dimension of rectangle, defaults to 0
+
+    """
     def __init__(self, width=0, height=0):
-        """Initialization method to create a Rectangle object.
-
-        Args:
-            width (int): Horizontal dimension of the rectangle (default is 0).
-            height (int): Vertical dimension of the rectangle (default is 0).
-
-        Attributes:
-            __width (int): Private attribute to store the width of the rectangle.
-            __height (int): Private attribute to store the height of the rectangle.
-        """
+        # attribute assigment here engages setters defined below
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getter method to retrieve the width of the rectangle."""
+        """__width getter.
+
+        Returns:
+            __width (int): horizontal dimension of rectangle
+
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter method to set the width of the rectangle.
+        """Args:
+            value (int): horizontal dimension of rectangle
 
-        Args:
-            value (int): Width value to be set.
+        Attributes:
+            __width (int): horizontal dimension of rectangle
 
         Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than 0.
+            TypeError: If `value` is not an int.
+            ValueError: If `value` is less than 0.
+
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
             raise ValueError('width must be >= 0')
@@ -37,41 +48,59 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter method to retrieve the height of the rectangle."""
+        """__height getter.
+
+        Returns:
+            __height (int): vertical dimension of rectangle
+
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter method to set the height of the rectangle.
+        """Args:
+            value (int): vertical dimension of rectangle
 
-        Args:
-            value (int): Height value to be set.
+        Attributes:
+            __height (int): vertical dimension of rectangle
 
         Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than 0.
+            TypeError: If `value` is not an int.
+            ValueError: If `value` is less than 0.
+
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('height must be an integer')
-        elif value < 0:
+        if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
 
     def area(self):
-        """Method to calculate the area of the rectangle.
+        """Returns area of a rectangle of a given `width` and `height`.
+
+        Attributes:
+            __width (int): horizontal dimension of rectangle
+            __height (int): vertical dimension of rectangle
 
         Returns:
-            int: Area of the rectangle (width * height).
+            Area of rectangle: __width * __height
+
         """
         return self.__width * self.__height
 
     def perimeter(self):
-        """Method to calculate the perimeter of the rectangle.
+        """Returns the perimeter of a rectangle of given `width` and `height`
+
+        Attributes:
+            __width (int): horizontal dimension of rectangle
+            __height (int): vertical dimension of rectangle
 
         Returns:
-            int: Perimeter of the rectangle (2 * (width + height)).
-        """
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+            0 if either attribute is 0, or the perimeter: (__width * 2) +
+            (__height * 2).
 
+        """
+        if self.__width is 0 or self.__height is 0:
+            return 0
+        else:
+            return (self.__width * 2) + (self.__height * 2)
