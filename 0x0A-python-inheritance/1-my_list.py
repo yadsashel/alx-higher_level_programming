@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-"""
-file: 1-mi_list.py
-Class:
--> MyList
-"""
+""" This module defines a class Mylist that inherits from 'list'"""
 
 
 class MyList(list):
-    """ class MyList that inherits from list """
+    """ inherits from the list base class and implements
+        sorted printing
+    """
 
     def print_sorted(self):
-        """ prints the list, but sorted """
+        """ prints the list sorted in ascending order """
         print(sorted(self))
