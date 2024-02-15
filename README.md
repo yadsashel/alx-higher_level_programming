@@ -1,1 +1,1 @@
-This is my 0x08-python-more_classes readme file
+This is my 0x0E-SQL_more_queries readme file
