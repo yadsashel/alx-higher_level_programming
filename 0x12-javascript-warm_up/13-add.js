@@ -1,8 +1,7 @@
 #!/usr/bin/node
 
 function add(a, b) {
-  return a + b;
+  return parseInt(a) + parseInt(b);
 }
 
 module.exports = { add };
-console.log(add(3, 5));
