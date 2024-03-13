@@ -40,15 +40,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - You are not allowed to use `var`
 
 ## Tasks
-Below are the tasks completed in this project along with their descriptions:
-
-### 0. Rectangle #0
-Write an empty class `Rectangle` that defines a rectangle.
-
-```javascript
-#!/usr/bin/node
-
-class Rectangle {}
-
-module.exports = Rectangle;
-
+you can see the tasks completed in this project
