@@ -51,7 +51,3 @@ This project was developed by Guillaume at Holberton School as part of the Highe
 - [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)
 - [10 Common Stumbling Blocks for SQLAlchemy Newbies](https://leportella.com/english/2019/01/10/sqlalchemy-basics-tutorial.html)
 - [SQLAlchemy ORM Tutorial for Python Developers](https://overiq.com/sqlalchemy-101/)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
