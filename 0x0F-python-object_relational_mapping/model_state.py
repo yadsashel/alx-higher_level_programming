@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define State class and Base instance"""
+"""Modules that Define the State class representing a state MySQL database"""
 
 import sys
 from sqlalchemy import Column, Integer, String
