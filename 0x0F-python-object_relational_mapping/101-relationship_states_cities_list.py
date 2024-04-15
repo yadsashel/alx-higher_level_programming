@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Creates a State and City relationship"""
+"""Lists all State objects and their corresponding City objects"""
 
 import sys
 from sqlalchemy import create_engine
@@ -15,9 +15,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="California")
-    new_city = City(name="San Francisco", state=new_state)
-    session.add(new_state)
-    session.add(new_city)
-    session.commit()
+    states = session.query(State).order_by(State.id).all()
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
+
     session.close()
