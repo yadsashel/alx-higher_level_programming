@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""Defines the State class and creates the states table in the database
-"""
+"""Defines the State class"""
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from sqlalchemy import create_engine
-from sys import argv
 
 Base = declarative_base()
 
