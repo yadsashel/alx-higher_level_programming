@@ -7,6 +7,7 @@ from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
+
 class State(Base):
     """Represents a state"""
     __tablename__ = 'states'
