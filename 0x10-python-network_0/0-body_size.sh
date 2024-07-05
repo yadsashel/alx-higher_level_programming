@@ -1,11 +1,3 @@
 #!/bin/bash
-
-# This script sends a request to a URL and displays the size of the body of the response.
-
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <URL>"
-    exit 1
-fi
-
-size=$(curl -sI "$1" | grep -i Content-Length | awk '{print $2}')
-echo "$size"
+# Script that takes in a URL, sends a GET request to the URL, and displays the size of the body of the response
+curl -s "$1" | wc -c
