@@ -1,4 +1,3 @@
 #!/bin/bash
-# Script that takes a URL, sends a GET request, and displays the body of the response
-
-curl -s "$1" -X GET -i | grep -i Content-Length | awk '{print $2}'
+# takes in a URL, sends a GET request to the URL, and displays the body of the response
+curl -sL "$1"
